@@ -1,25 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
+import Home from './component/Home'
+
+import ReactTable from './component/ReactTable';
+import BootstrapExample from './component/BootstrapExample';
+import RouterExample from './component/Routerexample';
+import HookExample from './Hook/HookExample';
+import { Provider } from 'react-redux';
+import ReduxExample from './Hook/ReduxExample';
+import store from './Hook/Store';
+import JqueryExample from './Hook/JqueryExample';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+     
+     <ReactTable></ReactTable>
+     <BootstrapExample></BootstrapExample>
+     
+     <HookExample></HookExample>
+     <Provider store={store}>
+        <ReduxExample />
+     </Provider>
+     <JqueryExample></JqueryExample>
+     
+    </div>    
   );
 }
 
-export default App;
+export default App;    
